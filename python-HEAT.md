@@ -23,7 +23,7 @@ cp dodas/env_heat.json_template env_heat.json
 cp dodas/mesoscluster-cms.yaml .
 ```
 
-* the `env_heat.json` file will appear as follow:
+* the `env_heat.json` file will appear as the following. You can configure it as your needs. You can also find a reference for each parameter [here](config-ref-HEAT.md).
 ```
 {
     "parameters": {
@@ -51,7 +51,6 @@ cp dodas/mesoscluster-cms.yaml .
     }
 }
 ```
-* configure the json as your needs. You can find an explaination guide of each parameter [here](config-ref-HEAT.md).
 
 ## Cluster creation
 
