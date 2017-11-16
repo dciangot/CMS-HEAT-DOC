@@ -1,9 +1,16 @@
 ## HEAT Prerequisites
 
-* openstack requirements:
-    * TODO
+In order to run the HEAT deployments you need:
 
-    * Get the HEAT Ubuntu16 server image from [here](), and import it in the Openstack project
+* openstack requirements:
+
+    * non-federated access to a tenant
+    
+    * at least one private network with outbound connectivity
+
+    * get the HEAT Ubuntu16 server image from [here]()
+    
+    * import that server image in the openstack tenant
 
 ## HEAT deployment tools
 

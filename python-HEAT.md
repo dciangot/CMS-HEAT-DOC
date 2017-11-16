@@ -11,7 +11,7 @@ git clone https://github.com/indigo-dc/mesos-cluster
 ```
 
 ## Cluster configuration 
-* get the repository for the [DODAS-CMS cluster deployment](https://github.com/indigo-dc/mesos-cluster/):
+* get the repository for the [DODAS-CMS cluster deployment](https://github.com/indigo-dc/mesos-cluster/tree/master/deploy/openstack-heat/dodas):
 ```
 git clone https://github.com/indigo-dc/mesos-cluster
 ```
@@ -59,11 +59,8 @@ cp dodas/mesoscluster-cms.yaml .
     * PROJECT_ID: the openstack project ID
 
 * executing `python dodas/setup_cluster.py` you'll be prompted with messages asking for openstack username and password. Insert them and the deployment of the cluster will start after that.
-
-N.B. there is no support in this script for federated credentials yet
  
 ## Deployment monitor
 
 * An example on how to use python binding for heatclient for deployment debug and monitoring is [here](https://gist.githubusercontent.com/dciangot/054f0d93598a670399c0b5bd36f4fd6d/raw/a86bad8cfe2905b5ee053635ae6add37b2e73381/deployment_status.py)
 
-* TODO: link a heatclient reference
