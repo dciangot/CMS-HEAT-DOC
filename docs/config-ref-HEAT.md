@@ -1,4 +1,4 @@
-# HEAT environment configuration guide
+# HEAT environment configuration reference
 
 
 ## Reference guide
