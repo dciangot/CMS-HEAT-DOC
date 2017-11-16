@@ -1,6 +1,6 @@
 # Summary
 
-* [Introduction](docs/README.md)
+* [Introduction](README.md)
 * [Requirements](docs/Requirements.md)
 * [Getting started](docs/Getting-started.md)
     * [HEAT-based deployment](docs/HEAT.md)
