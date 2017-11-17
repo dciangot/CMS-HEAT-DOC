@@ -4,15 +4,15 @@
 
 In order to run the HEAT-based deployments you need:
 
-* openstack requirements:
+* Requirements for OpenStack:
 
-    * local access to a tenant
-    
-    * at least one private network with outbound connectivity
-
-    * import an HEAT Ubuntu (16 or 14) server server image in the openstack tenant
-        * you can get the HEAT Ubuntu16 one [here](https://cernbox.cern.ch/index.php/s/yNxOulSmebMDKAZ/download)
-    
+    * Keystone access to a project
+    * At least one private network with outbound connectivity
+    * Import an HEAT Ubuntu (14 or 16) server image in the OpenStack project
+        * Get images here:
+            * [Ubuntu 14.04](https://LinkHERE) 
+            * [Ubuntu 16.04](https://cernbox.cern.ch/index.php/s/yNxOulSmebMDKAZ/download)
+             
 ## Deployment tools
 
 * [Python bindings](python-HEAT.md)
