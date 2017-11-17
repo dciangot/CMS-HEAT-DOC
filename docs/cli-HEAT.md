@@ -1,4 +1,4 @@
-# Recipe for CLI
+# Recipe for HEAT Command Line Interface
 
 <span style="color:red"> This documentation is under development. </span>
 
