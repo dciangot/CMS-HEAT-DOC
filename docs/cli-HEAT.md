@@ -42,7 +42,7 @@ Once the deployment process started, it is possible to monitor it through the Op
 * now you should be able to see you deployment under the very same name you inserted when prompted by the `setup_cluster.py` script. The status of the deployment is also shown on the same line
 * you can click on the the deployment to gather more in-depth information
 
-In alternative, for more advanced usages, you can explore the CLI tools. For example you can get the list of current stacks with the corresponding status as follow:
+In alternative, for more advanced usages, you can explore the [CLI tools](https://docs.openstack.org/python-heatclient/latest/man/heat.html). For example you can get the list of current stacks with the corresponding status as follow:
 
 ````
 heat stack-list
