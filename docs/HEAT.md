@@ -9,7 +9,7 @@ In order to run the HEAT-based toolkit you need:
 * The project must have at least one private network with outbound connectivity
 * The project must have access to either Ubuntu 14.04 or 16.04 server image with hooks for HEAT.
     * Get the images here:
-        * [Ubuntu 14.04](https://LinkHERE) [Not available yet]
+        * [Ubuntu 14.04](https://cernbox.cern.ch/index.php/s/I9G2mW7Gymrh8wZ/download)
         * [Ubuntu 16.04](https://cernbox.cern.ch/index.php/s/yNxOulSmebMDKAZ/download)
              
 ## Recipes for deployment 
