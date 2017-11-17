@@ -1,23 +1,17 @@
-# HEAT-based deployment: python bindings
+# Recipe for Python bindings 
 <span style="color:red"> This documentation is under development. </span>
 
-## Python requirements
-
-* install [the HEAT client python bindings](https://docs.openstack.org/python-heatclient/latest/index.html): 
+## Environment setup 
+Before running the recipe you need to setup the environment by installing [the HEAT client python bindings](https://docs.openstack.org/python-heatclient/latest/index.html). Using pip: 
 ```
 pip install heatclient
 ```
-
-* get the repository for the [DODAS-CMS cluster deployment](https://github.com/indigo-dc/mesos-cluster/):
-```
-git clone https://github.com/indigo-dc/mesos-cluster
-```
-
-## Cluster configuration 
 * get the repository for the [DODAS-CMS cluster deployment](https://github.com/indigo-dc/mesos-cluster/tree/master/deploy/openstack-heat/dodas):
 ```
 git clone https://github.com/indigo-dc/mesos-cluster
 ```
+## DODAS site configuration 
+Once the environment setup is ready you need to prepare a JSON based configuration file and finally start the execution. 
 
 * get to the deployment directory and copy the heat environment json from `dodas/env_heat.json_template`
 ```
