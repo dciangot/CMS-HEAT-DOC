@@ -29,7 +29,7 @@ Starting the deployment is possible following the next steps:
 source env.sh
 ```
 
-* Start the deployment:
+* For any problem you can find [here](https://docs.openstack.org/python-heatclient/latest/man/heat.html) the documentation about the CLI, but in most of the cases the following command will be enough to start the deployment:
 ```
 heat stack-create <YOUR_CLUSTER_NAME> -e env_heat --template-url "https://raw.githubusercontent.com/indigo-dc/mesos-cluster/master/deploy/openstack-heat/dodas/mesoscluster-cms.yaml"
 ```
