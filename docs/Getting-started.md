@@ -1,4 +1,4 @@
-# Deployment instructions
+# Deployment Strategies
 <span style="color:red"> This documentation is under development. </span>
 
 DODAS provides two deployment toolkits. One is implemented with HEAT and thus OpenStack specific while the other is based on TOSCA standard language and, as such, applicable to any type of IaaS including OpenStack.
