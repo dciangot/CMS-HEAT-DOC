@@ -54,10 +54,11 @@ Starting the deployment is possible following the next steps:
     * AUTH_URL: your keystone URL endpoint of the openstack instance
     * PROJECT_ID: your openstack project ID
 
+
 * executing `python dodas/setup_cluster.py` you'll be prompted with messages asking for OpenStack keystone username and password, and the stack deployment name. Insert them and you are done, the deployment will start after that.
 
 ## Deployment monitor
-Once the deployment process started is possible to monitor it through the OpenStack web interface as follows:
+Once the deployment process started, it is possible to monitor it through the OpenStack web interface as follows:
 
 * after logging in with your user name go to the project that you indicated in the `setup_cluster.py` few steps above
 * click the tab `ORCHESTRATION` followed by `Stacks`
