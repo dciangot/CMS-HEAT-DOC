@@ -1,11 +1,8 @@
 
 # DODAS usage modes
 <span style="color:red"> This documentation is under development. </span>
-## HEAT-based deployment (Openstack only)
-
-[here](HEAT.md)
+## [HEAT-based deployment](HEAT.md) (OpenStack only)
 
 
-## PaaS orchestrator based deployment (any Iaas, Openstack included) 
+## [Indigo PaaS Orchestrator-based deployment](IM.md) (Any IaaS including Openstack) 
 
-[here](IM.md)
