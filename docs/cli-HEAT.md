@@ -3,10 +3,12 @@
 <span style="color:red"> This documentation is under development. </span>
 
 ## Environment setup 
-Before running the recipe you need to setup the environment by installing [the HEAT client python bindings](https://docs.openstack.org/python-heatclient/latest/index.html). Using pip: 
+Before running the recipe you need to setup the environment by installing [the HEAT client python bindings](https://docs.openstack.org/python-heatclient/latest/index.html). On Ubuntu you can do: 
 ```
-pip install heatclient
+sudo apt install python-heatclient
 ```
+For other operating systems you can look at the openstack documentation.
+
 
 Then download the environment and configuration templates as follows:
 ```
