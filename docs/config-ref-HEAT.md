@@ -25,7 +25,7 @@
 
 * *server_image (string, default='')*: openstack image identifier to be used for all the created VMs
 
-* *cms_wn_image (string, default='')*: docker image identifier for WNs, suggested one at this stage is spiga/cmswn
+* *cms_wn_image (string, default='')*: docker image identifier for WNs, suggested one at this stage is spiga/cmswn:newccb
 
 * *cms_proxycache_image (string, default='')*: docker image for proxy cache application, suggested spiga/ttscache
 

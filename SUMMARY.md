@@ -8,5 +8,6 @@
     * [Recipe for CLI](docs/cli-HEAT.md)
     * [Configuration reference](docs/config-ref-HEAT.md)
   * [PaaS Orchestrator deployment](docs/IM.md)
+* [HowTo](howto.md)
 * [F.A.Q.](docs/FAQ.md)
 
