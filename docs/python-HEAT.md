@@ -1,28 +1,52 @@
 # Recipe for Python bindings 
+
 <span style="color:red"> This documentation is under development. </span>
 
 ## Environment setup 
-Before running the recipe you need to setup the environment by installing [the HEAT client python bindings](https://docs.openstack.org/python-heatclient/latest/index.html). On ubuntu you can do: 
-```
-sudo apt install python-heatclient
-```
-For other operating systems you can look at the openstack documentation.
 
-Then you have to download the repository for the [DODAS-CMS cluster deployment](https://github.com/indigo-dc/mesos-cluster/tree/master/deploy/openstack-heat/dodas):
-```
+Download the repository for the [DODAS-CMS cluster deployment](https://github.com/indigo-dc/mesos-cluster/tree/master/deploy/openstack-heat/dodas) and enter in `deploy/openstack-heat`:
+
+```bash
 git clone https://github.com/indigo-dc/mesos-cluster
+cd mesos-cluster/deploy/openstack-heat/dodas
 ```
+
+Install the dependencies with `pip` or use `pipenv` to create a virtual environment for this deployment:
+
+```bash
+sudo pip install -r requirements.txt
+```
+
+OR
+
+```bash
+pipenv install
+pipenv shell
+```
+
+The dependencies installed include [the HEAT client python bindings](https://docs.openstack.org/python-heatclient/latest/index.html). 
+
+> **NOTES**: You can also install dependencies using the package manager of your system; e.g. on ubuntu you can do: 
+> ```bash
+> sudo apt install python-heatclient
+> ```
+> For other operating systems you can look at the openstack documentation.
+
+
 ## DODAS site configuration 
+
 Once the environment setup is ready you need to prepare a JSON based configuration file and finally start the execution. 
 
-* get to the deployment directory and copy the heat environment JSON from the template `env_heat.json_template`
-```
-cd mesos-cluster/deploy/openstack-heat/dodas
+* Copy the heat environment JSON and the setup config from the templates (`env_heat.json_template`, `setup_config.json_template`) inside the `dodas` folder:
+
+```bash
 cp env_heat.json_template env_heat.json
+cp setup_config.json_template setup_config.json
 ```
 
 * the `env_heat.json` file will appear as the following. You have now to configure it as your needs. You can find a reference for each parameter [here](config-ref-HEAT.md).
-```
+
+```JSON
 {
     "parameters": {
         "network": "",
@@ -50,17 +74,47 @@ cp env_heat.json_template env_heat.json
 }
 ```
 
+* the `setup_config.json` file will appear as the following. You have now to configure it as your needs. You can find a reference for each parameter [here](config-ref-python-script.md).
+
+```JSON
+{
+    "auth_url": "",
+    "project_id": "",
+    "user": "",
+    "heat_template": "mesoscluster-cms.yaml",
+    "heat_environment_variables": "env_heat.json",
+    "setup_script": "setup.sh",
+    "stack-name": "",
+    "indigo": {
+        "client_id": "",
+        "client_secret": "",
+        "grant_type": "password",
+        "username": "",
+        "scope": "openid profile email offline_access",
+        "url": "https://iam-test.indigo-datacloud.eu/token"
+    }
+}
+```
+
 ## Cluster creation
-Starting the deployment is possible following the next steps:
-* you have to change the following parameters in the setup script `setup_cluster.py`:
-    * AUTH_URL: your keystone URL endpoint of the openstack instance
-    * PROJECT_ID: your openstack project ID
 
+Starting the deployment is possible executing:
 
-* executing `python dodas/setup_cluster.py` you'll be prompted with messages asking for OpenStack keystone username and password, and the stack deployment name. Insert them and you are done, the deployment will start after that.
+```bash
+python setup_cluster_dev.py setup_config.json run
+```
+
+You'll be prompted with messages asking for OpenStack keystone password and INDIGO password. Insert them and you are done, the deployment will start after that.
 
 ## Deployment monitor
+
 Once the deployment process started, it is possible to monitor it through the OpenStack web interface as follows:
+
+```bash
+python setup_cluster_dev.py setup_config.json status
+```
+
+Otherwise you che use the *Horizon* portal as following:
 
 * after logging in with your user name go to the project that you indicated in the `setup_cluster.py` few steps above
 * click the tab `ORCHESTRATION` followed by `Stacks`
@@ -69,3 +123,10 @@ Once the deployment process started, it is possible to monitor it through the Op
 
 In alternative, for more advanced uses, you can use python bindings in order to debug and monitor the deployment. You can find an example script [here](https://gist.githubusercontent.com/dciangot/054f0d93598a670399c0b5bd36f4fd6d/raw/a86bad8cfe2905b5ee053635ae6add37b2e73381/deployment_status.py)
 
+## Cluster deletion
+
+Delete the cluster with the following command and wait for the process to be completed:
+
+```bash
+python setup_cluster_dev.py setup_config.json delete
+```
