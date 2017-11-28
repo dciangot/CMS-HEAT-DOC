@@ -5,9 +5,9 @@
 <span style="color:red"> This documentation is under development. </span>
 
 
-### Use the Python script
+### Python script
 
-Debug the cluster creation through the script using the command `debug`. This command accept other parameters to help your debugging: you can debug `resources` or `softwares` and for each one you can see the current status and the status reason in case of errors (with the std input and output too).
+Debug the cluster creation through the script using the command `debug` (read about the Python script installation [here](python-HEAT.md)). This command accept other parameters to help your debugging: you can debug `resources` or `softwares` and for each one you can see the current status and the status reason in case of errors (with the std input and output too).
 
 Here some example of the possible commands:
 

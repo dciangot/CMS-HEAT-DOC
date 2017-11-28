@@ -28,7 +28,7 @@ The dependencies installed include [the HEAT client python bindings](https://doc
 
 > **NOTES**: You can also install dependencies using the package manager of your system; e.g. on ubuntu you can do: 
 > ```bash
-> sudo apt install python-heatclient
+> sudo apt install python-heatclient ...
 > ```
 > For other operating systems you can look at the openstack documentation.
 
