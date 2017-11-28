@@ -19,7 +19,7 @@
 
 * **marathon_password** *(string, default='password')*: password for marathon instance
 
-* **stack-name** (string, default='')*: name to assign to the stack
+* **stack-name** *(string, default='')*: name to assign to the stack
 
 ### INDIGO
 
