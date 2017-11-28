@@ -13,13 +13,13 @@
 
 * **heat_template** *(string, default='mesoscluster-cms.yaml')*: name of the heat file
 
-* **heat_environment_variables** *(string, default='env_heat.json')*: name of the heat environment file
+* **heat\_environment\_variables** *(string, default='env_heat.json')*: name of the heat environment file
 
 * **setup_script** *(string, default='setup.sh')*: name of the setup file
 
 * **marathon_password** *(string, default='password')*: password for marathon instance
 
-* **stack**-*name (string, default='')*: name to assign to the stack
+* **stack-name** (string, default='')*: name to assign to the stack
 
 ### INDIGO
 
