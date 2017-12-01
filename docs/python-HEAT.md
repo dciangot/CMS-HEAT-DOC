@@ -78,13 +78,13 @@ cp setup_config.json_template setup_config.json
 
 ```JSON
 {
-    "auth_url": "",
-    "project_id": "",
-    "user": "",
+    "openstack_auth_url": "",
+    "openstack_project_id": "",
+    "openstack_user": "",
     "heat_template": "mesoscluster-cms.yaml",
     "heat_environment_variables": "env_heat.json",
-    "setup_script": "setup.sh",
-    "stack-name": "",
+    "setup_script": "../setup.sh",
+    "stack_name": "",
     "indigo": {
         "client_id": "",
         "client_secret": "",
@@ -114,23 +114,6 @@ Once the deployment process started, it is possible to monitor it through the Op
 python setup_cluster_dev.py setup_config.json status
 ```
 
-Otherwise you che use the *Horizon* portal as following:
-
-* after logging in with your user name go to the project that you indicated in the `setup_cluster.py` few steps above
-* click the tab `ORCHESTRATION` followed by `Stacks`
-* now you should be able to see you deployment under the very same name you inserted when prompted by the `setup_cluster.py` script. The status of the deployment is also shown on the same line
-* you can click on the the deployment to gather more in-depth information
-
-In alternative, for more advanced uses, you can use python bindings in order to debug and monitor the deployment. You can find an example script [here](https://gist.githubusercontent.com/dciangot/054f0d93598a670399c0b5bd36f4fd6d/raw/a86bad8cfe2905b5ee053635ae6add37b2e73381/deployment_status.py)
-
-## Cluster status
-
-Detect the current status of the cluster with the following command:
-
-```bash
-python setup_cluster_dev.py setup_config.json status
-```
-
 If you want to monitor the creation activity you can use the status command as follow:
 
 ```bash
@@ -138,6 +121,15 @@ python setup_cluster_dev.py setup_config.json status --monitor=True
 ```
 
 This will monitor the creation process giving you the current status until the end of the operation or the press of `^C` keyboard sequence.
+
+Another option is to use the *Horizon* portal as following:
+
+* after logging in with your user name go to the project that you indicated in the `setup_cluster.py` few steps above
+* click the tab `ORCHESTRATION` followed by `Stacks`
+* now you should be able to see you deployment under the very same name you inserted when prompted by the `setup_cluster.py` script. The status of the deployment is also shown on the same line
+* you can click on the the deployment to gather more in-depth information
+
+In alternative, for more advanced uses, you can use python bindings in order to debug and monitor the deployment. You can find an example script [here](https://gist.githubusercontent.com/dciangot/054f0d93598a670399c0b5bd36f4fd6d/raw/a86bad8cfe2905b5ee053635ae6add37b2e73381/deployment_status.py)
 
 ## Cluster deletion
 

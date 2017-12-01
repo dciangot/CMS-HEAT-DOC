@@ -5,11 +5,11 @@
 
 ### Generals
 
-* **auth_url** *(string, default='')*: openstack auth entrypoint
+* **openstack_auth_url** *(string, default='')*: openstack auth entrypoint
 
-* **project_id** *(string, default='')*: openstack project identifier
+* **openstack_project_id** *(string, default='')*: openstack project identifier
 
-* **user** *(string, default='')*: openstack username
+* **openstack_user** *(string, default='')*: openstack username
 
 * **heat_template** *(string, default='mesoscluster-cms.yaml')*: name of the heat file
 
