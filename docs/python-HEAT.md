@@ -123,6 +123,22 @@ Otherwise you che use the *Horizon* portal as following:
 
 In alternative, for more advanced uses, you can use python bindings in order to debug and monitor the deployment. You can find an example script [here](https://gist.githubusercontent.com/dciangot/054f0d93598a670399c0b5bd36f4fd6d/raw/a86bad8cfe2905b5ee053635ae6add37b2e73381/deployment_status.py)
 
+## Cluster status
+
+Detect the current status of the cluster with the following command:
+
+```bash
+python setup_cluster_dev.py setup_config.json status
+```
+
+If you want to monitor the creation activity you can use the status command as follow:
+
+```bash
+python setup_cluster_dev.py setup_config.json status --monitor=True
+```
+
+This will monitor the creation process giving you the current status until the end of the operation or the press of `^C` keyboard sequence.
+
 ## Cluster deletion
 
 Delete the cluster with the following command and wait for the process to be completed:
