@@ -83,7 +83,6 @@ cp setup_config.json_template setup_config.json
     "openstack_user": "",
     "heat_template": "mesoscluster-cms.yaml",
     "heat_environment_variables": "env_heat.json",
-    "setup_script": "../setup.sh",
     "stack_name": "",
     "indigo": {
         "client_id": "",
@@ -92,6 +91,9 @@ cp setup_config.json_template setup_config.json
         "username": "",
         "scope": "openid profile email offline_access",
         "url": "https://iam-test.indigo-datacloud.eu/token"
+    },
+    "files": {
+        "https://raw.githubusercontent.com/indigo-dc/mesos-cluster/master/deploy/openstack-heat/setup.sh": "../setup.sh"
     }
 }
 ```

@@ -11,15 +11,15 @@
 
 * **openstack_user** *(string, default='')*: openstack username
 
-* **heat_template** *(string, default='mesoscluster-cms.yaml')*: name of the heat file
+* **heat_template** *(string, default='mesoscluster-cms.yaml')*: name of the HEAT file
 
-* **heat\_environment\_variables** *(string, default='env_heat.json')*: name of the heat environment file
-
-* **setup_script** *(string, default='setup.sh')*: name of the setup file
+* **heat\_environment\_variables** *(string, default='env_heat.json')*: name of the HEAT environment file
 
 * **marathon_password** *(string, default='password')*: password for marathon instance
 
 * **stack-name** *(string, default='')*: name to assign to the stack
+
+* **files** *(string, default='{} or key not present')*: a dictionary where you can specify a local file to load inside the HEAT template. The key will be the name of the file in the HEAT template and the value will be the path to the local file that have to be loaded.
 
 ### INDIGO
 
